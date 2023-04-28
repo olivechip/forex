@@ -7,11 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    {% for msg in get_flashed_messages() %}
+    <p> {{ msg }}</p>
+    {% endfor %}
     <form action="/convert">
         <p>Converting from<input id="from" name="from"></p>
         <p>Converting to<input id="to" name="to"></p>
         <p>Amount:<input id="amount" name="amount"></p>
         <p><button>Convert</button></p>
     </form>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
