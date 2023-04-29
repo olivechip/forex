@@ -1,5 +1,11 @@
 {% extends 'app.html' %}
 
+{% block flashes %}
+    {% for category, msg in get_flashed_messages("with_categories=true") %}
+        <p class="invalid"> {{ msg }}</p>
+    {% endfor %}
+{% endblock %}
+
 {% block content %}
-    {{ currency_converted }}
+    The result is: {{ currency_converted }} {{currency_to}}
 {% endblock %}

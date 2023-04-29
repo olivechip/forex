@@ -1,0 +1,10 @@
+button{
+    background-color: #00bfff;
+    color: white;
+    border-radius: 10%;
+    border: none;
+    padding: 1rem;
+}
+.invalid {
+    background-color: #FF6961;
+}
