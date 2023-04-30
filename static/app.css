@@ -5,6 +5,14 @@ button{
     border: none;
     padding: 1rem;
 }
+
+.converted{
+    background-color: #98fb98;
+    padding: 0.5rem;
+    border-radius: 10%;
+}
 .invalid {
     background-color: #FF6961;
+    padding: 0.5rem;
+    border-radius: 10%;
 }

@@ -39,13 +39,13 @@ def convert():
                 currency_converted = round((data['result']), 2)
             except TypeError:
                 flash('Please enter a valid amount', 'invalid')
-                return render_template('converted.html')
+                return render_template('failed.html')
             # return data
-            return render_template('converted.html', currency_converted = currency_converted, currency_to = currency_to)
+            return render_template('success.html', amount = data['query']['amount'], currency_from = currency_from, currency_converted = currency_converted, currency_to = currency_to)
         if not is_float(currency_amount):
             flash('Please enter a valid amount', 'invalid')
     if currency_from not in valid_codes:
         flash('Please enter a valid currency code to convert from', 'invalid')
     if currency_to not in valid_codes:
         flash('Please enter a valid currency code to convert to', 'invalid')
-    return render_template('converted.html')
+    return render_template('failed.html')
